@@ -1,0 +1,14 @@
+.container{
+    /* background-color: purple; */
+}
+.textColor{
+    color: black;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+.test{
+    height: 500px;
+}

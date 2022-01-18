@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+  
+:root{
+  --primaryColor:#373B44;
+  --secondaryColor:#4a4e58;
+  --textSecondary:grey;
+  --scrollColor:#b3b6bb;/*ced1d8*/
+  --scrollBGColor:rgb(236, 229, 229);
+  --scrollBorderColor:#6e6f70;
+  --bannerTextSecondaryColor:#595f6d;
+  --skillBGColor:white;
+  --skillColor:var(--primaryColor);
+  --skillProgressBarBorderColor:#1d8997;
+  --navBarHeight:3.4rem;
+  --LogoBorderColor:#3f3f72;
+  --varSourceCodeContainerColor:white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--scrollBGColor);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollColor);
+  border-radius: 20px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li{
+  list-style: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContentSection {
+position: relative;
+}
+/* Global page layout*/
+.pageContainer{
+  padding: 10px;
+  min-height: calc(100vh - 3rem);
+  background-color: rgb(251, 249, 249);
+}
+.contentContainer{
   display: flex;
+  justify-content: center;
+  justify-items: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  background: white;
+  border-radius: 5px;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
 }

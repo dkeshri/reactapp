@@ -1,0 +1,16 @@
+.container{
+    background-color: var(--varSourceCodeContainerColor);
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.pre{
+    
+}
+@media screen and (max-width:400px){
+    .container{
+        justify-content: space-between;
+    }
+  }

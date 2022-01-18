@@ -1,0 +1,71 @@
+.container{
+    max-height: 515px;
+    display: flex;
+}
+.SkillContainer{
+    flex: 1;
+    display: flex;
+    padding: 30px;
+}
+.SkillTitileContainer{
+    display: flex;
+    justify-content: center;
+    flex: .7;
+    align-items: center;
+    flex-direction: column;
+}
+.h1{
+    font-size: 50px;
+    font-family: 'Merienda', cursive;
+}
+.span{
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+}
+.box{
+    display: flex;
+    width: 100%;
+    box-shadow: inset -2px -2px 4px #ededf7,
+    inset 2px 2px 4px #86868d ;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.box::-webkit-scrollbar {
+    width: 8px;
+  }
+.box::-webkit-scrollbar-track {
+    background: var(--scrollBGColor);
+    display: none;
+  }
+.box::-webkit-scrollbar-thumb {
+    background-color: var(--scrollColor);
+    border-radius: 20px;
+    display: none;
+  }
+  .box:hover::-webkit-scrollbar-thumb{
+      display: block;
+  }
+@media screen and (max-width: 845px) {
+    .box{
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        flex-direction: column;
+    }
+    .SkillTitileContainer{
+        order: 1;
+        margin-top: 20px;
+    }
+    .SkillContainer{
+        order: 2;
+    }
+    .box{
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}

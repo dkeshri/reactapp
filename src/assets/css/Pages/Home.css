@@ -1,0 +1,8 @@
+.Home-container{
+    /* background: url('../../../img/img-1.jpg') center center/cover no-repeat; */
+    min-height: calc(100vh - 3rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

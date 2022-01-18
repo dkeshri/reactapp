@@ -1,0 +1,8 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+.test{
+    height: 500px;
+}

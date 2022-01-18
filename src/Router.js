@@ -26,10 +26,10 @@ export const AppRouter = () => {
                 {routeList.map((item, i) => {
                         let Component = item.component;
                     if (item.openPage){
-                        return <Route path={`${item.path}`} key={i} element={<ProtectedRoute openPage><Component/> </ProtectedRoute>} />
+                        return <Route path={`${item.path}`} key={i} element={<ProtectedRoute openPage><Component url={item.path}/> </ProtectedRoute>} />
                     }else{
                         
-                        return <Route path={`${item.path}`} key={i} element={<ProtectedRoute><Component/></ProtectedRoute>} />
+                        return <Route path={`${item.path}`} key={i} element={<ProtectedRoute><Component url={item.path}/></ProtectedRoute>} />
                     }
                        
                 })}

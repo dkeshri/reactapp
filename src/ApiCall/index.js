@@ -4,7 +4,8 @@ const staticProperty = {
   baseUrl: `https://jsonplaceholder.typicode.com`,
   responseType: 'json',
   headers: {
-    "Content-type": "application/json; charset=UTF-8"
+    "Content-type": "application/json; charset=UTF-8",
+    "Accept": "application/json"
   }
 }
 export const useHttpRequest = (argData = {}, dependencies = []) => {
@@ -25,8 +26,11 @@ export const useHttpRequest = (argData = {}, dependencies = []) => {
       }],
       transformResponse: [function (data) {
         // Do whatever you want to transform the data
+        if (typeof data === 'string' || data instanceof String)
+          return JSON.parse(data);
+        else
+          return data;
 
-        return data;
       }],
       headers: staticProperty.headers,
     })
@@ -59,8 +63,10 @@ export const httpRequest = (argData = {}) => {
       }],
       transformResponse: [function (data) {
         // Do whatever you want to transform the data
-
-        return data;
+        if (typeof data === 'string' || data instanceof String)
+          return JSON.parse(data);
+        else
+          return data;
       }],
     })
       .then(res => {
